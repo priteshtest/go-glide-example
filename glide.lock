@@ -1,5 +1,5 @@
-hash: 4d3f9823bba99043d6c00c6d89240c158449bb09cd6b2d71bc332269863a85ba
-updated: 2017-05-03T14:31:22.881082387+08:00
+hash: 83f014a6e535eff3d5eaa8df27d56c61e15f2baf59e8393c14a9e32cd64a0051
+updated: 2017-05-06T15:27:10.961518773+08:00
 imports:
 - name: github.com/ant0ine/go-json-rest
   version: ce4b71cdf7ba29ef443d704bd923f5bbf281ee30
@@ -7,8 +7,6 @@ imports:
   version: aabad6e819789e569bd6aabf444c935aa9ba1e44
 - name: github.com/crowdmob/goamz
   version: 3a06871fe9fc0281ca90f3a7d97258d042ed64c0
-- name: github.com/docker/docker
-  version: 90d35abf7b3535c1c319c872900fbd76374e521c
 - name: github.com/fatih/color
   version: 42c364ba490082e4815b5222728711b3440603eb
 - name: github.com/google/go-github
@@ -40,7 +38,7 @@ imports:
 - name: github.com/pkg/errors
   version: 248dadf4e9068a0b3e79f02ed0a610d935de5302
 - name: github.com/simeji/jid
-  version: 9090f06e9643aa1a4e95904a4ebbd6d186b3a20f
+  version: d10e096b3607c2145694d879ed98aec70421b4f4
 - name: github.com/srcclr/example-go-glide
   version: 09ba718d41eeda85b90852da868e8705429dcaff
   subpackages:

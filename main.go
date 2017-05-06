@@ -8,8 +8,7 @@ import "github.com/kylelemons/go-gypsy"
 import "github.com/openshift/origin"
 import "github.com/ant0ine/go-json-rest"
 import "github.com/crowdmob/goamz"
-import "github.com/docker/docker"
-
+import "github.com/simeji/jid"
 type Options struct {
     Query   string `url:"q"`
     ShowAll bool   `url:"all"`

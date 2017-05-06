@@ -1,0 +1,34 @@
+hash: 1c03704033607805370ff8ee5ce3423249ec3a3c3715f1786fac0b593939d0bb
+updated: 2017-03-29T11:01:03.481936431+08:00
+imports:
+- name: github.com/bitly/go-simplejson
+  version: aabad6e819789e569bd6aabf444c935aa9ba1e44
+- name: github.com/fatih/color
+  version: 42c364ba490082e4815b5222728711b3440603eb
+- name: github.com/google/go-github
+  version: 173908142398084e14d7f14c39924f0004d43679
+  subpackages:
+  - github
+- name: github.com/google/go-querystring
+  version: 53e6ce116135b80d037921a7fdd5138cf32d7a8a
+  subpackages:
+  - query
+- name: github.com/mattn/go-colorable
+  version: d228849504861217f796da67fae4f6e347643f15
+- name: github.com/mattn/go-isatty
+  version: 30a891c33c7cde7b02a981314b4228ec99380cca
+- name: github.com/mattn/go-runewidth
+  version: 737072b4e32b7a5018b4a7125da8d12de90e8045
+- name: github.com/nsf/termbox-go
+  version: abe82ce5fb7a42fbd6784a5ceb71aff977e09ed8
+- name: github.com/nwidger/jsoncolor
+  version: 0192e84d44af834c3a90c8a17bf670483b91ad5a
+- name: github.com/pkg/errors
+  version: 248dadf4e9068a0b3e79f02ed0a610d935de5302
+- name: github.com/simeji/jid
+  version: 1fe54ef34a09fab74f38ae40dcca6e1f0974d297
+- name: golang.org/x/sys
+  version: d75a52659825e75fff6158388dddc6a5b04f9ba5
+  subpackages:
+  - unix
+testImports: []

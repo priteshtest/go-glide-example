@@ -5,8 +5,6 @@ import:
 - package: github.com/ant0ine/go-json-rest
   version: ^3.3.2
 - package: github.com/crowdmob/goamz
-- package: github.com/docker/docker
-  version: ^17.5.0-ce-rc3
 - package: github.com/google/go-github
   subpackages:
   - github
@@ -17,9 +15,10 @@ import:
 - package: github.com/mitchellh/go-homedir
 - package: github.com/openshift/origin
   version: ^20141021.0.0-pre
-- package: github.com/simeji/jid
-  version: ^0.7.2
+- package: github.com/simeji/jid 
+  version: d10e096b3607c2145694d879ed98aec70421b4f4
 - package: github.com/srcclr/example-go-glide
   subpackages:
   - sub
   - sub2
+

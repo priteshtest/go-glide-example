@@ -1,0 +1,86 @@
+{
+  "id": "ruby-helloworld-sample-template",
+  "kind": "Template",
+  "apiVersion": "v1beta1",
+  "name": "ruby-hello-world-template",
+  "description": "This example shows how to create a simple ruby application in openshift origin v3",
+  "parameters": [
+    {
+      "name": "ADMIN_USERNAME",
+      "description": "administrator username",
+      "generate": "expression",
+      "from": "admin[A-Z0-9]{3}"
+    },
+    {
+      "name": "ADMIN_PASSWORD",
+      "description": "administrator password",
+      "generate": "expression",
+      "from": "[a-zA-Z0-9]{8}"
+    },
+    {
+      "name": "DB_PASSWORD",
+      "description": "database password",
+      "generate": "expression",
+      "from": "[a-zA-Z0-9]{8}"
+    }
+  ],
+  "items": [
+    {
+      "id": "frontend",
+      "kind": "Service",
+      "apiVersion": "v1beta1",
+      "port": 5432,
+      "containerPort": 8080,
+      "selector": {
+        "name": "frontend"
+      }
+    },
+    {
+      "id": "frontend-deploy",
+      "kind": "Deployment",
+      "apiVersion": "v1beta1",
+      "triggerPolicy": "manual",
+      "configId": "frontend-config",
+      "strategy": {
+        "type": "customPod",
+        "customPod": {
+          "image": "openshift/kube-deploy"
+        }
+      },
+      "controllerTemplate": {
+        "replicas": 1,
+        "replicaSelector": {
+          "name": "frontend"
+        },
+        "podTemplate": {
+          "desiredState": {
+            "manifest": {
+              "version": "v1beta1",
+              "id": "frontendController",
+              "containers": [{
+                "name": "ruby-helloworld",
+                "image": "127.0.0.1:5001/openshift/origin-ruby-sample",
+                "env": [
+                  {
+                    "name": "ADMIN_USERNAME",
+                    "value": "${ADMIN_USERNAME}"
+                  },
+                  {
+                    "name": "ADMIN_PASSWORD",
+                    "value": "${ADMIN_PASSWORD}"
+                  },
+                  {
+                    "name": "DB_PASSWORD",
+                    "value": "${DB_PASSWORD}"
+                  }
+                ],
+                "ports": [{"containerPort": 8080}]
+              }]
+            }
+          },
+          "labels": {"name": "frontend"}
+        }
+      }
+    }
+  ]
+}
